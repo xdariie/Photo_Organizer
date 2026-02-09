@@ -1,3 +1,6 @@
+This application is intended to run on Windows. It relies on System.
+Drawing for EXIF metadata processing, which is only fully supported on Windows.
+
 FileScanner.cs performs an initial recursive scan of the monitored 
 directory and detects files that already exist before folder monitoring 
 starts.
