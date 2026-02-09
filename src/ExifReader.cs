@@ -20,8 +20,8 @@ namespace Photo_Organization
                 if (!image.PropertyIdList.Contains(DateTakenId)) return null;
 
                 PropertyItem item = image.GetPropertyItem(DateTakenId);
-                if (item.Value == null) return null;
-                string dateString = System.Text.Encoding.ASCII.GetString(item.Value).Trim('\0');
+                if (item == null) return null;
+                string dateString = System.Text.Encoding.ASCII.GetString(item.Value!).Trim('\0');
 
                 return DateTime.ParseExact(dateString, "yyyy:MM:dd HH:mm:ss", CultureInfo.InvariantCulture);
 
